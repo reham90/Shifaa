@@ -154,6 +154,105 @@ html[dir="ltr"] .progress-bar {
  font-family: "NeoSansArabicBold";
  
 }
+.control{
+  display: flex;
+  gap:10px;
+  align-items: center;
+}
+.control button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  outline: none;
+  padding: 0;
+  background-color: rgba(175, 175, 175, 0.2);
+  width: 42px;
+  height: 35px;
+  border-radius: 4px;
+  color:var(--main-color);
+  font-size: 20px;
+  transition: 0.5s;
+}
+.control button:hover{
+  background-color: var(--main-hover);
+  color: #fff;
+}
+.control button:focus{
+  background-color: var(--main-hover);
+  color: #fff;
+  border: 0;
+  outline: none;
+}
+.test-block{
+  background-color: rgba(241, 248, 253, 1);
+  padding: 20px;
+  margin: 0 0 30px;
+}
+.test-title-bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 20px;
+}
+.date-test{
+  color: var(--main-color);
+  font-size: 20px;
+  text-align: start;
+  display: flex;
+}
+.test-list{
+ 
+  margin: 0;
+  padding: 0;
+}
+.test-list li{
+  color: var(--main-color);
+  font-size: 24px;
+  font-family: "NeoSansArabicMedium";
+}
+.save{
+  display: flex;
+  justify-content: flex-end;
+}
+.save-btn{
+  background-color: var(--main-color);
+  padding: 0;
+  border: 0;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 59px;
+  height: 40px;
+  border: 8px;
+  color: #fff;
+  font-size: 28px;
+  transition: 0.5s;
+  border-radius: 8px;
+}
+.save-btn:hover{
+  background-color: var(--main-hover);
+}
+.save-btn:focus{
+  background-color: var(--main-hover);
+  border: 0;
+  outline: none;
+}
+.consultation{
+  color: var(--main-color);
+  display: block;
+  font-size: 16px;
+  font-family: "NeoSansArabicMedium";
+}
+
+.test-title{
+  color: var(--main-color);
+  text-transform: capitalize;
+  font-size: 28px;
+  font-family: "NeoSansArabicBold";
+  margin: 0;
+}
 .diag-answer{
   border: 1px solid var(--main-hover);
   padding: 20px;
@@ -659,7 +758,7 @@ transition: 0.5s;
   background-color: #fff;
   color: var(--sec-color);
   text-align: center;
-  min-width: 120px;
+  min-width: 150px;
   box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.11);
   border-radius: unset;
   z-index: 300;
@@ -693,8 +792,11 @@ transition: 0.5s;
   display: block;
   transition: 0.5s;
   font-size: 14px !important;
-  color: #000;
+  color: var(--main-color);
   text-transform: capitalize;
+}
+.dropdown-content a:hover{
+  color: var(--main-hover);
 }
 .number{
   position: absolute;
@@ -2703,6 +2805,15 @@ background-color: rgba(0, 47, 61, 1);
     flex-wrap: nowrap;
     width: 100%;
     overflow-x: scroll;
+}
+.test-title-bar{
+  flex-wrap: wrap;
+}
+.test-title{
+  font-size: 24px;
+}
+.test-list li{
+  font-size: 20px;
 }
 .details-bar{
   flex-wrap: wrap;

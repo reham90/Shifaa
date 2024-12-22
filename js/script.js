@@ -52,7 +52,9 @@ $(document).ready(function() {
   });
 
 
-
+  $('.delete').on('click', function(){
+    $(this).closest("tr").remove();
+  });
 
   //fixed nav
 //   $stickyNav = $(".top-header");
