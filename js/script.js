@@ -56,6 +56,20 @@ $(document).ready(function() {
     $(this).closest("tr").remove();
   });
 
+
+
+  $("#extend").click(function(e){
+		e.preventDefault();
+    
+		$("#extend-field").append('<div class="form-record"> <div class="form-block"><label class="form-label">state</label><select class="form-input"><option>choose your state</option><option>choose your state</option><option>choose your state</option></select></div><div class="form-block"><label class="form-label">city</label><select class="form-input"><option>choose your city</option><option>choose your city</option><option>choose your city</option></select></div></div><div class="form-record"> <div class="form-block"><label class="form-label">phone number</label><input class="form-input" type="number" placeholder="Please enter your phone number"></div><div class="form-block"><label class="form-label">address</label><input class="form-input" type="text" placeholder="Please enter your address"></div></div></div>');
+  });
+
+
+  $("#extend2").click(function(e){
+		e.preventDefault();
+    
+		$("#extend-field2").append('<div class="form-record"><div class="form-block"><label class="form-label">doctor name</label><input class="form-input" type="text" placeholder="Please enter doctor name"></div><div class="form-block"><label class="form-label">doctor specialty</label><input class="form-input" type="text" placeholder="Please enter doctor specialty"></div></div><div class="form-record"><div class="form-block"><label class="form-label">doctor room number</label><input class="form-input" type="number" placeholder="Please enter doctor room number"></div></div>');
+  });
   //fixed nav
 //   $stickyNav = $(".top-header");
 //   $(window).scroll("scroll load", function() {

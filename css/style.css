@@ -798,6 +798,175 @@ transition: 0.5s;
 .dropdown-content a:hover{
   color: var(--main-hover);
 }
+.profile-pic {
+  border-radius: 8px;
+  height: 186px;
+  width: 186px;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  vertical-align: middle;
+  text-align: center;
+  color: transparent;
+  transition: all .3s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.profile-pic:hover {
+  background-color: rgba(0,0,0,.5);
+  z-index: 10000;
+  color: #fff;
+  transition: all .3s ease;
+  text-decoration: none;
+}
+.new-add{
+  color: var(--main-hover);
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  transition: 0.5s;
+  font-size: 14px;
+  font-family: "NeoSansArabicMedium";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  margin: 0 auto;
+}
+.new-add i{
+  font-size: 24px;
+}
+.new-add:hover{
+  color: var(--main-color);
+  border: 0;
+  outline: none;
+}
+.address-block label {
+  margin: 0;
+}
+.checkmark-2 {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex
+;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--main-color);
+  position: relative;
+}
+.address-type-radio:checked~.checkmark-2::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--main-hover);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+input[type="radio"], input[type="checkbox"] {
+  margin: 0;
+  outline: none;
+}
+.address-type{
+  font-size: 22px;
+  font-family: "NeoSansArabicMedium";
+  color: var(--main-color);
+}
+.switch-btn {
+  width: 52px;
+  height: 32px;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+}
+.switch-checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+  background-color: var(--main-hover);
+}
+.switch-btn .knobs, #button-1 .knobs:before, .switch-btn .layer {
+  transition: 0.3s ease all;
+}
+.switch-btn .knobs, .switch-btn .knobs:before, .switch-btn .layer {
+  transition: 0.3s ease all;
+}
+.knobs, .layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.knobs {
+  z-index: 2;
+  width: 50px;
+  height: 28px;
+  border-radius: 14px;
+  background-color: #C5C5C5;
+}
+.switch-btn .switch-checkbox:checked+.knobs:before {
+  content: "";
+  left: 25px;
+  background-color: #fff;
+}
+.switch-btn .knobs:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+.switch-btn .switch-checkbox:checked+.knobs {
+  background-color: var(--main-hover);
+}
+.address-block{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap:10px;
+}
+.address-type-radio {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  inset-inline-end: 0;
+}
+.new-add:focus{
+  color: var(--main-color);
+  border: 0;
+  outline: none;
+}
+
+.profile-pic span {
+  display: inline-block;
+  padding-top: 4.5em;
+  padding-bottom: 4.5em;
+}
+
+#fileToUpload {
+        display: none;
+        cursor: pointer;
+}
 .number{
   position: absolute;
   top: -7px;

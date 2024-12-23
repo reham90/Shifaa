@@ -167,9 +167,9 @@
           </button>
           <div class="dropdown-content">
             <a href="settings.html">settings</a>
-            <a href="#">assestant settings</a>
-            <a href="#">change password</a>
-            <a href="#">change language</a>
+            <a href="assistant-settings.html">assistant settings</a>
+            <a href="change-password.html">change password</a>
+            <a href="change-language.html">change language</a>
             <a href="#">log out</a>
           </div>
         </div>
@@ -182,691 +182,342 @@
  <!-- start sessions-div-->
  
  <div class="sessions-div">
- <div class="details-bar">
-  <div class="person-img">
-    <img src="images/person.png" alt="person img">
-    <div class="last-exam">
-      <i class="las la-calendar"></i>
-      <p>
-        last examination date
-        <span>
-          18/5/2024
-        </span>
-      </p>
-    </div>
-  </div>
-  <div class="person-card">
-    <ul class="person-card-list">
-      <li>
-        <i class="las la-user-check"></i>
-        Name : Reham Adel
-      </li>
-      <li>
-        <i class="las la-user-check"></i>
-       ID No : Dam33668ad3
-      </li>
-      <li>
-        <i class="las la-transgender"></i>
-       Gender : Female
-      </li>
-      <li>
-        <i class="las la-phone"></i>
-       Phone : 0100000000
-      </li>
-      <li>
-        <i class="las la-calendar"></i>
-       Age : 34
-      </li>
-
-      <li>
-        <i class="las la-map-marker-alt"></i>
-       Location : location
-      </li>
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">settings</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">Prescription settings</a>
+    </li>
+   
+  </ul><!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane p-3 active" id="tabs-1" role="tabpanel">
+      <div class="diagnosis">
+        <label class="exam-label">
+        Basic Info
+        </label>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+          <label for="fileToUpload">
+        <div class="profile-pic" style="background-image: url('images/dr.png')">
+            <span class="glyphicon glyphicon-camera"></span>
+            <span>Change Image</span>
+        </div>
+        </label>
+        <input type="File" name="fileToUpload" id="fileToUpload">
+      </form>
+        <form class="px-form">
+        
+          <div class="form-record">
+            <div class="form-block">
+              <label class="form-label">
+                phone number
+              </label>
+              <input class="form-input" type="number" placeholder="Please enter your phone number">
+            </div>
+            <div class="form-block">
+              <label class="form-label">
+               another phone number
+              </label>
+              <input class="form-input" type="number" placeholder="Please enter your phone number">
+            </div>
+          </div>
       
-    </ul>
-    <div class="add-div">
-    <a href="#" class="add">
-    update data
-    </a>
-  </div>
-  </div>
- </div>
+          <div class="form-record">
+            <div class="form-block">
+              <label class="form-label">
+               name
+              </label>
+              <input class="form-input" type="text" placeholder="Please enter your name">
+            </div>
+            <div class="form-block">
+              <label class="form-label">
+              email
+              </label>
+              <input class="form-input" type="email" placeholder="Please enter your email">
+            </div>
+          </div>
+      
+         
+      
+          <div class="add-div">
+          
+             
+     
+            <button class="add">
+              update data
+            </button>
+          </div>
+        </form>
+        </div>
+    
+   
 
  <div class="diagnosis">
   <label class="exam-label">
    
-   Update Personal Information
+  Add New Address
   </label>
   <form class="px-form">
+    <div id="extend-field">  
     <div class="form-record">
       <div class="form-block">
         <label class="form-label">
-          patient name
+         state
         </label>
-        <input class="form-input" type="text" placeholder="Please enter patient Name">
+       <select class="form-input">
+      <option>choose your state</option>
+      <option>choose your state</option>
+      <option>choose your state</option>
+       </select>
       </div>
       <div class="form-block">
         <label class="form-label">
-          age
+         city
         </label>
-        <input class="form-input" type="text" placeholder="Please enter your age">
+        <select class="form-input">
+          <option>choose your city</option>
+          <option>choose your city</option>
+          <option>choose your city</option>
+           </select>
       </div>
     </div>
 
     <div class="form-record">
       <div class="form-block">
         <label class="form-label">
-         address
-        </label>
-        <input class="form-input" type="text" placeholder="Please enter your address">
-      </div>
-      <div class="form-block">
-        <label class="form-label">
-         phone number
+        phone number
         </label>
         <input class="form-input" type="number" placeholder="Please enter your phone number">
       </div>
-    </div>
-
-    <div class="form-record">
       <div class="form-block">
         <label class="form-label">
-        gender
+       address
         </label>
-      <select class="form-input">
-       <option>please choose your gender</option>
-       <option>male</option>
-       <option>female</option>
-      </select>
-      </div>
-      <div class="form-block">
-        <label class="form-label">
-        city
-        </label>
-        <select class="form-input">
-          <option>please choose your city</option>
-          <option>please choose your city</option>
-          <option>please choose your city</option>
-         </select>
+        <input class="form-input" type="text" placeholder="Please enter your address">
       </div>
     </div>
+</div>
+   
 
     <div class="add-div">
-      <button type="button" class="btn btn-primary  add" data-toggle="modal" data-target="#exampleModal">
-        save
-        </button>
-        <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
+    
        
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body easy-modal-body">
-       <img class="img-fluid" src="images/success-2.png" alt="success">
-       
-       <p>
-       Update successfully !!
-       </p>
-      </div>
-     
-    </div>
-  </div>
-</div>
-      <button class="add">
-        close
+
+      <button class="add" >
+        add new
       </button>
+      
     </div>
+  <button class="new-add" id="extend">
+    <i class="las la-plus-circle"></i>
+    add new address
+  </button>
   </form>
 </div>
 <div class="diagnosis">
   <label class="exam-label">
-    <i class="las la-info-circle"></i>
-    Diagnosis Info
+    
+   Address
   </label>
-  <div class="diag-answer">
-    There are no old diagnoses in this page
-  </div>
+  <table>
+
+    <tr>
+      <th>state</th>
+      <th> city</th>
+      <th>phone</th>
+      <th>address</th>
+      <th>delete</th>
+     
+      
+    </tr>
+    <tr>
+      <td>dakahlya</td>
+      <td>mansoura</td>
+      <td>0100000000</td>
+      <td>mansoura aaa</td>
+     
+      
+      <td>
+       <div class="control">
+       <button class="delete">
+        <i class="las la-times"></i>
+       </button>
+      
+       </div>
+      </td>
+    </tr>
+    <tr>
+      <td>dakahlya</td>
+      <td>mansoura</td>
+      <td>0100000000</td>
+      <td>mansoura aaa</td>
+     
+      
+      <td>
+       <div class="control">
+       <button class="delete">
+        <i class="las la-times"></i>
+       </button>
+      
+       </div>
+      </td>
+    </tr>
+   
+   
+  </table>
   
 </div>
 
 <div class="diagnosis">
-
+  <label class="exam-label">
+    
+    Disclosure information
+   </label>
   <form class="px-form">
     <div class="form-record">
       <div class="form-block">
         <label class="form-label">
-          height
+          specialization
         </label>
-        <input class="form-input" type="text" placeholder="160" disabled>
+        <select class="form-input">
+          <option>choose your specialization</option>
+          <option>choose your specialization</option>
+          <option>choose your specialization</option>
+           </select>
       </div>
       <div class="form-block">
         <label class="form-label">
-          weight
+          new price
         </label>
-        <input class="form-input" type="text" placeholder="65" disabled>
+        <input class="form-input" type="text" placeholder="please enter your new price">
       </div>
     </div>
 
     <div class="form-record">
       <div class="form-block">
         <label class="form-label">
-          blood pressure
+          resumption price
         </label>
-        <input class="form-input" type="text" placeholder="120/70" disabled>
-      </div>
-      <div class="form-block">
-        <label class="form-label">
-          heartbeats
-        </label>
-        <input class="form-input" type="text" placeholder="110" disabled>
-      </div>
-    </div>
-    <div class="form-record">
-      <div class="form-block">
-        <label class="form-label">
-         random suger
-        </label>
-        <input class="form-input" type="text" placeholder="80" disabled>
-      </div>
-      <div class="form-block">
-        <label class="form-label">
-        breakfast suger
-        </label>
-        <input class="form-input" type="text" placeholder="80" disabled>
-      </div>
-    </div>
-    <div class="form-record">
-      <div class="form-block">
-        <label class="form-label">
-         fasting suger
-        </label>
-        <input class="form-input" type="text" placeholder="80" disabled>
-      </div>
-      <div class="form-block">
-        <label class="form-label">
-        blood type
-        </label>
-        <input class="form-input" type="text" placeholder="o+" disabled>
-      </div>
-    </div>
-    <div class="form-record">
-      <div class="form-block">
-        <label class="form-label">
-        oxygen
-        </label>
-        <input class="form-input" type="text" placeholder="92" disabled>
+        <input class="form-input" type="text" placeholder="please enter your new price" >
       </div>
      
     </div>
+   
+  
+   
     <div class="add-div">
       <a href="#" class="add">
-        update data
+       save
       </a>
     </div>
   </form>
 </div>
 <div class="diagnosis">
   <label class="exam-label">
-    <i class="las la-prescription"></i>
-    Prescription Details
-  </label>
-  <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
-      <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">only</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">all</a>
-    </li>
    
-  </ul><!-- Tab panes -->
-  <div class="tab-content">
-    <div class="tab-pane p-3 active" id="tabs-1" role="tabpanel">
+  Add Service List
+  </label>
+  
+  
       <table>
 
         <tr>
-          <th>counter</th>
-          <th>medicine name</th>
-          <th>medicine dose</th>
-          <th>medicine time</th>
-          <th>date</th>
-          <th>control</th>
+          <th>title</th>
+          <th>price</th>
+          <th>delete</th>
+          
           
         </tr>
         <tr>
-          <td>1</td>
-          <td>ogmantin</td>
-          <td>2 pills</td>
-          <td>every 12 hours</td>
-          <td>15/8/2024</td>
+          <td>100</td>
+          <td>50</td>
+          
           
           <td>
            <div class="control">
            <button class="delete">
             <i class="las la-times"></i>
            </button>
-           <button >
-            <i class="las la-redo-alt"></i>
-           </button>
+         
            </div>
           </td>
         </tr>
+        
+        
         <tr>
-          <td>1</td>
-          <td>ogmantin</td>
-          <td>2 pills</td>
-          <td>every 12 hours</td>
-          <td>15/8/2024</td>
+          <td>100</td>
+          <td>50</td>
+          
           
           <td>
            <div class="control">
            <button class="delete">
             <i class="las la-times"></i>
            </button>
-           <button >
-            <i class="las la-redo-alt"></i>
-           </button>
-           </div>
-          </td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>ogmantin</td>
-          <td>2 pills</td>
-          <td>every 12 hours</td>
-          <td>15/8/2024</td>
-          
-          <td>
-           <div class="control">
-           <button class="delete">
-            <i class="las la-times"></i>
-           </button>
-           <button >
-            <i class="las la-redo-alt"></i>
-           </button>
+         
            </div>
           </td>
         </tr>
        
       </table>
       
-      <div class="pagenation-div">
-        <span class="showing">
-          Showing 1-5 from 100
-        </span>
-        <ul class="pag-list">
-          <li>
-            <a href="#">
-              <i class="las la-angle-left"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="active">
-              1
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              2
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              3
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              4
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="las la-angle-right"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-      </div>
-
-      <div class="tab-pane p-3" id="tabs-2" role="tabpanel">
-        <div class="test-block">
-          <div class="test-title-bar">
-            <h2 class="test-title">
-              Medical Test Details
-            </h2>
-            <span class="date-test">
-              <b>Date : </b>
-              16/9/2024
-            </span>
-          </div>
-          <ul class="test-list">
-            <li>
-              1 - Hend - dd - 2022-05-26 - 15:12:22
-            </li>
-            <li>
-              1 - Hend - dd - 2022-05-26 - 15:12:22
-            </li>
-          </ul>
-          <div class="save">
-            <button class="save-btn">
-              <i class="las la-save"></i>
-            </button>
-          </div>
-        </div>
-
-        <div class="test-block">
-          <div class="test-title-bar">
-            <h2 class="test-title">
-              Medical Test Details
-            </h2>
-            <span class="date-test">
-              <b>Date : </b>
-              16/9/2024
-            </span>
-          </div>
-          <ul class="test-list">
-            <li>
-              1 - Hend - dd - 2022-05-26 - 15:12:22
-            </li>
-            <li>
-              1 - Hend - dd - 2022-05-26 - 15:12:22
-            </li>
-          </ul>
-          <div class="save">
-            <button class="save-btn">
-              <i class="las la-save"></i>
-            </button>
-          </div>
-        </div>
-
-        <div class="test-block">
-          <div class="test-title-bar">
-            <h2 class="test-title">
-              Medical Test Details
-            </h2>
-            <span class="date-test">
-              <b>Date : </b>
-              16/9/2024
-            </span>
-          </div>
-          <ul class="test-list">
-            <li>
-              1 - Hend - dd - 2022-05-26 - 15:12:22
-            </li>
-            <li>
-              1 - Hend - dd - 2022-05-26 - 15:12:22
-            </li>
-          </ul>
-          <div class="save">
-            <button class="save-btn">
-              <i class="las la-save"></i>
-            </button>
-          </div>
-        </div>
-
-        </div>
-      </div>
-
-</div>
-
-<div class="diagnosis">
-  <label class="exam-label">
-    <i class="las la-prescription"></i>
-    Consultation
-  </label>
-<span class="consultation">
-  Consultation Date : 1/1/2025
-</span>
-</div>
-<div class="diagnosis">
-  <label class="exam-label">
-    <i class="las la-prescription"></i>
-    Medical Tests Details
-  </label>
-  <table>
-
-    <tr>
-      <th>counter</th>
-      <th> name</th>
-      <th>note</th>
-      <th>photo</th>
-      <th>date</th>
-      <th>control</th>
-      
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Reham</td>
-      <td>.....</td>
-      <td>...</td>
-      <td>15/8/2024</td>
-      
-      <td>
-       <div class="control">
-       <button class="delete">
-        <i class="las la-times"></i>
-       </button>
-       <button >
-        <i class="las la-redo-alt"></i>
-       </button>
-       </div>
-      </td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Reham</td>
-      <td>.....</td>
-      <td>...</td>
-      <td>15/8/2024</td>
-      
-      <td>
-       <div class="control">
-       <button class="delete">
-        <i class="las la-times"></i>
-       </button>
-       <button >
-        <i class="las la-redo-alt"></i>
-       </button>
-       </div>
-      </td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Reham</td>
-      <td>.....</td>
-      <td>...</td>
-      <td>15/8/2024</td>
-      
-      <td>
-       <div class="control">
-       <button class="delete">
-        <i class="las la-times"></i>
-       </button>
-       <button >
-        <i class="las la-redo-alt"></i>
-       </button>
-       </div>
-      </td>
-    </tr>
-   
-  </table>
   
-  <div class="pagenation-div">
-    <span class="showing">
-      Showing 1-5 from 100
-    </span>
-    <ul class="pag-list">
-      <li>
-        <a href="#">
-          <i class="las la-angle-left"></i>
-        </a>
-      </li>
-      <li>
-        <a href="#" class="active">
-          1
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          2
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          3
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          4
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="las la-angle-right"></i>
-        </a>
-      </li>
-    </ul>
-  </div>
+
+
 </div>
+
 <div class="diagnosis">
   <label class="exam-label">
-    <i class="las la-prescription"></i>
-    Medical Radiology Details
+    
+   Add Service
   </label>
-  <table>
+  <form class="px-form">
+    <div class="form-record">
+      <div class="form-block">
+        <label class="form-label">
+         title
+        </label>
+        <input class="form-input" type="text" placeholder="please enter the title">
+      </div>
+      <div class="form-block">
+        <label class="form-label">
+           price
+        </label>
+        <input class="form-input" type="text" placeholder="please enter the  price">
+      </div>
+    </div>
 
-    <tr>
-      <th>counter</th>
-      <th> name</th>
-      <th>note</th>
-      <th>photo</th>
-      <th>date</th>
-      <th>control</th>
-      
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Reham</td>
-      <td>.....</td>
-      <td>...</td>
-      <td>15/8/2024</td>
-      
-      <td>
-       <div class="control">
-       <button class="delete">
-        <i class="las la-times"></i>
-       </button>
-       <button >
-        <i class="las la-redo-alt"></i>
-       </button>
-       </div>
-      </td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Reham</td>
-      <td>.....</td>
-      <td>...</td>
-      <td>15/8/2024</td>
-      
-      <td>
-       <div class="control">
-       <button class="delete">
-        <i class="las la-times"></i>
-       </button>
-       <button >
-        <i class="las la-redo-alt"></i>
-       </button>
-       </div>
-      </td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Reham</td>
-      <td>.....</td>
-      <td>...</td>
-      <td>15/8/2024</td>
-      
-      <td>
-       <div class="control">
-       <button class="delete">
-        <i class="las la-times"></i>
-       </button>
-       <button >
-        <i class="las la-redo-alt"></i>
-       </button>
-       </div>
-      </td>
-    </tr>
    
-  </table>
+   
   
-  <div class="pagenation-div">
-    <span class="showing">
-      Showing 1-5 from 100
-    </span>
-    <ul class="pag-list">
-      <li>
-        <a href="#">
-          <i class="las la-angle-left"></i>
-        </a>
-      </li>
-      <li>
-        <a href="#" class="active">
-          1
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          2
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          3
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          4
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="las la-angle-right"></i>
-        </a>
-      </li>
-    </ul>
-  </div>
+   
+    <div class="add-div">
+      <a href="#" class="add">
+       add new
+      </a>
+    </div>
+  </form>
 </div>
-
-
 <div class="diagnosis">
   <label class="exam-label">
-    <i class="las la-prescription"></i>
-    Examination
+    
+   schedule list
   </label>
   <table>
 
     <tr>
-      <th>counter</th>
-      <th> name</th>
-      <th>doctor's specialty</th>
-      <th>examination room number</th>
+      <th>day</th>
+      <th> start</th>
+      <th>end</th>
+      <th>delete</th>
      
-      <th>control</th>
       
     </tr>
     <tr>
-      <td>1</td>
-      <td>Reham</td>
-      <td>ophthalmologist</td>
-      <td>5</td>
+      <td>sunday</td>
+      <td>22:16:00</td>
+      <td>16:12:00</td>
       
       
       <td>
@@ -874,68 +525,272 @@
        <button class="delete">
         <i class="las la-times"></i>
        </button>
-       <button >
-        <i class="las la-redo-alt"></i>
+      
+       </div>
+      </td>
+    </tr>
+    <tr>
+      <td>sunday</td>
+      <td>22:16:00</td>
+      <td>16:12:00</td>
+      
+      
+      <td>
+       <div class="control">
+       <button class="delete">
+        <i class="las la-times"></i>
        </button>
+      
        </div>
       </td>
     </tr>
    
+  </table>
+  
+  
+</div>
+<div class="diagnosis">
+  <label class="exam-label">
+   
+   schedule
+  </label>
+  <form class="px-form">
+    <div class="form-record">
+      <div class="form-block">
+        <label class="form-label">
+          day
+        </label>
+        <select class="form-input">
+          <option>choose the day</option>
+          <option>choose the day</option>
+          <option>choose the day</option>
+           </select>
+      </div>
+      <div class="form-block">
+        <label class="form-label">
+         start time
+        </label>
+        <input class="form-input" type="time" >
+      </div>
+    </div>
+
+    <div class="form-record">
+      <div class="form-block">
+        <label class="form-label">
+         end time
+        </label>
+        <input class="form-input" type="time"  >
+      </div>
+     
+    </div>
+   
   
    
-  </table>
-</div>
+    <div class="add-div">
+      <a href="#" class="add">
+       add new
+      </a>
+    </div>
+  </form>
+ </div>
 
 <div class="diagnosis">
   <label class="exam-label">
     <i class="las la-prescription"></i>
-    Card
+   Who Can See The Patient Diagnosis:
   </label>
-  <table>
-
-    <tr>
-      <th>counter</th>
-      <th> name</th>
-      <th>note</th>
-      <th>photo</th>
-      <th>date</th>
-      <th>control</th>
-      
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Reham</td>
-      <td>.....</td>
-      <td>...</td>
-      <td>15/8/2024</td>
-      
-      <td>
-       <div class="control">
-       <button class="delete">
-        <i class="las la-times"></i>
-       </button>
-       <button >
-        <i class="las la-redo-alt"></i>
-       </button>
-       </div>
-      </td>
-    </tr>
-  
-   
-  </table>
+  <div class="form-record">
+  <div class="form-block address-block">
+    <label>
+    <input type="radio" class="address-type-radio" name="payment type">
+    <span class="checkmark-2"></span>
+    </label>
+    <span class="address-type">
+      Available For The Patient Only
+    </span>
+ </div>
+ <div class="form-block address-block">
+  <label>
+  <input type="radio" class="address-type-radio" name="payment type">
+  <span class="checkmark-2"></span>
+  </label>
+  <span class="address-type">
+    Available For The Doctors Only
+  </span>
+</div>
+</div>
 </div>
 
+<div class="diagnosis">
+
+  <form class="px-form">
+    <div class="form-record">
+      <div class="form-block address-block gap-30">
+        <span class="address-type">
+        Can The Doctor Accept To Do Online Check Ups:
+      </span>
+        <div class="switch-btn">
+          <input type="checkbox" class="switch-checkbox">
+          <div class="knobs"></div>
+          <div class="layer"></div>
+       </div>
+      </div>
+      <div class="form-block address-block gap-30">
+        <span class="address-type">
+          Can The Doctor Accept To Do Online Chat:
+      </span>
+        <div class="switch-btn">
+          <input type="checkbox" class="switch-checkbox">
+          <div class="knobs"></div>
+          <div class="layer"></div>
+       </div>
+      </div>
+    </div>
+
+    <div class="form-record">
+      <div class="form-block address-block gap-30">
+        <span class="address-type">
+          Can The Assistant See All The Dashboard:
+      </span>
+        <div class="switch-btn">
+          <input type="checkbox" class="switch-checkbox">
+          <div class="knobs"></div>
+          <div class="layer"></div>
+       </div>
+      </div>
+      <div class="form-block address-block gap-30">
+        <span class="address-type">
+          Can The patient can view the diagnosis:
+      </span>
+        <div class="switch-btn">
+          <input type="checkbox" class="switch-checkbox">
+          <div class="knobs"></div>
+          <div class="layer"></div>
+       </div>
+      </div>
+    </div>
+   
+  
+   
+    <div class="add-div">
+      <a href="#" class="add">
+       save
+      </a>
+    </div>
+  </form>
+</div>
+<div class="diagnosis">
+  <label class="exam-label">
+   
+   Password Assistance
+  </label>
+  <form class="px-form">
+    <div class="form-record">
+      <div class="form-block">
+        <label class="form-label">
+          user name
+        </label>
+        <input class="form-input" type="text" placeholder="please enter the name" >
+      </div>
+      <div class="form-block">
+        <label class="form-label">
+        password
+        </label>
+        <input class="form-input" type="password" placeholder="please enter the password" >
+      </div>
+    </div>
+
+   
+   
+  
+   
+    <div class="add-div">
+      <a href="#" class="add">
+       add new
+      </a>
+    </div>
+  </form>
+ </div>
 
   </div>
+  <div class="tab-pane p-3 " id="tabs-2" role="tabpanel">
+    <div class="diagnosis">
+      <label class="exam-label">
+        Doctor Info
+      </label>
+      <form class="px-form">
+        
+        <div class="form-record">
+          <div class="form-block">
+            <label class="form-label">
+              name
+            </label>
+            <input class="form-input" type="text" placeholder="Please enter your name">
+          </div>
+          <div class="form-block">
+            <label class="form-label">
+             specialization
+            </label>
+            <input class="form-input" type="text" placeholder="Please enter your specialization">
+          </div>
+        </div>
+    
+        <div class="form-record">
+          <div class="form-block">
+            <label class="form-label">
+             phone number
+            </label>
+            <input class="form-input" type="number" placeholder="Please enter your phone number">
+          </div>
+          <div class="form-block">
+            <label class="form-label">
+           address
+            </label>
+           <select class="form-input">
+            <option>choose the address</option>
+            <option>choose the address</option>
+            <option>choose the address</option>
+            </select>
+          </div>
+        </div>
 
+        <div class="form-record"></div>
+          <div class="form-block">
+            <label class="form-label">
+            logo
+            </label>
+            <input class="form-input" type="file">
+          </div>
+          <div class="form-block">
+            <label class="form-label">
+           seal
+            </label>
+            <input class="form-input" type="file">
+          </div>
+        </div>
+    
 
+       
+    
+        <div class="add-div">
+        
+           
+   
+          <button class="add">
+           save
+          </button>
+        </div>
+      </form>
+    </div>
+    </div>
+</div>
   
 
 <!-- end sessions-div -->
 </div>
 
  
- </div>
+
 </div>
    <!-- end whole-dashboard -->
    
