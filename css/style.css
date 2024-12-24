@@ -933,6 +933,34 @@ input[type="radio"], input[type="checkbox"] {
   border-radius: 50%;
   transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
 }
+.mes-title{
+  display: flex;
+  align-items: center;
+  color: var(--main-color);
+  gap:10px;
+  margin: 0;
+  text-align: start;
+  font-size: 24px;
+  font-family: "NeoSansArabicMedium";
+}
+.mes-title a{
+  color: var(--main-color);
+  background-color: var(--main-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 43px;
+  border-radius: 8px;
+  transition: 0.5s;
+  text-decoration: none;
+  font-size: 14px;
+}
+.mes-title a:hover{
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--main-color);
+}
 .switch-btn .switch-checkbox:checked+.knobs {
   background-color: var(--main-hover);
 }
